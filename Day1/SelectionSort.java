@@ -1,5 +1,4 @@
 package Day1;
-import java.util.*;
 class selectionSort {
 
     static int select(int arr[], int i) {

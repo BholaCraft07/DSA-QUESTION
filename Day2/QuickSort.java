@@ -3,7 +3,7 @@ public class QuickSort {
         if(start>=end) return;
         int p=partition(arr,start,end);
         quicksort(arr,start,p-1);
-        quicksort(arr, p+1, end);
+        quicksort(arr, p+1, end);c    c   
     }
 
     static int partition(int[] arr, int start, int end) {

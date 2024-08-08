@@ -6,11 +6,12 @@ public class Implement_Lower_Bound {
     public static int lowerBound(int[] arr, int target) {
         int start=0;
         int end=arr.length-1;
-        int ans=arr.length;
+        // int ans=arr.length;
+        int ans=-1;
         while (start<=end) {
             int mid=(start+end)/2;
             if(arr[mid]>=target){
-                ans=arr[mid];
+                ans=mid;
                 end=mid-1;
             }
             else start=mid+1;
@@ -20,12 +21,14 @@ public class Implement_Lower_Bound {
     public static void main(String[] args) {
         // int arr[]={1,2,2,3,3,5};
         // int arr[]={1, 2, 4, 7};
-        int arr[]={3, 4, 7, 8, 8, 10};
+        // int arr[]={3, 4, 7, 8, 8, 10};
+        int arr[]={5,7,7,8,8,10};
+
         // System.out.println("Lower index is "+lowerBound(arr, 0));//0 
         // System.out.println("Lower index is "+lowerBound(arr, 2));//1
         // System.out.println("Lower index is "+lowerBound(arr, 3));//3
         // System.out.println("Lower index is "+lowerBound(arr, 1));//6
-        System.out.println("Lower index is "+lowerBound(arr, 5));//6
+        System.out.println("Lower index is "+lowerBound(arr, 8));//6
 
 
 

@@ -2,11 +2,12 @@ public class Implement_Upper_Bound {
     public static int UpperBound(int arr[],int target){
         int start=0;
         int end=arr.length-1;
-        int ans=arr.length;
+        // int ans=arr.length;
+        int ans=-1;
         while(start<=end){
             int mid=(start+end)/2;
             if(arr[mid]>target){
-                ans=mid;
+                ans=mid-1;
                 end=mid-1;
             }
             else start=mid+1;
@@ -22,5 +23,6 @@ public class Implement_Upper_Bound {
         // System.out.println("Upper Bound is  "+UpperBound(arr, ));//3
         // System.out.println("Upper Bound is  "+UpperBound(arr, 2));//3
         System.out.println("Upper Bound is  "+UpperBound(arr, 5));//3
+        // System.out.println("Upper Bound is  "+UpperBound(arr, 6));//3
     }
 }
